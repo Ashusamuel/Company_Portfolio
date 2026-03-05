@@ -289,7 +289,7 @@ cta-btn {
 
 /* ================= FOOTER ================= */
 .footer {
-    background: #0f172a;
+    background: var(--black);
     color: #ccc;
     padding: 60px 20px 20px;
 }
