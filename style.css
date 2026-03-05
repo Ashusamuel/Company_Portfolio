@@ -1,9 +1,9 @@
 :root {
     --black: #0c0c0c;
-     --gold: #d4af37; 
-     --green: #1b5e20; 
-     --red: #c1121f; 
-     --white: #ffffff;
+    --gold: #d4af37; 
+    --green: #1b5e20; 
+    --red: #c1121f; 
+    --white: #ffffff;
 }
 
 /* RESET */
@@ -17,17 +17,22 @@
 body {
     background: var(--black);
     color: var(--white);
+    line-height: 1.6;
+}
+
+main {
+    padding-top: 100px; /* space for fixed header */
 }
 
 /* HEADER */
 header {
-   display: flex;
-   justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
     position: fixed;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
@@ -43,7 +48,7 @@ header {
 }
 
 nav a {
-    margin:0 15px;
+    margin: 0 15px;
     text-decoration: none;
     color: var(--white);
     transition: 0.3s;
@@ -53,33 +58,23 @@ nav a:hover {
     color: var(--red);
 }
 
-cta-btn {
-    background:var(--red);
-    border: none;
-    padding: 10px 18px;
-    color: var(--white);
-    border-radius: 25px;
-    cursor: pointer;
-}
-
-/* HERO SECTION */
+/* HERO */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     background: url('images/background.jpg') center/cover no-repeat;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 120px 20px 60px;
+    position: relative;
 }
 
 .overlay {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(0, 0, 0, 0.7);
 }
-
 
 .hero-content {
     position: relative;
@@ -90,44 +85,42 @@ cta-btn {
     font-size: 48px;
     color: var(--gold);
     margin-bottom: 20px;
-
 }
 
 .hero p {
-    margin: 20px 0;
     font-size: 18px;
-    
+    margin-bottom: 25px;
 }
 
 .btn {
     padding: 12px 25px;
     background: var(--green);
     text-decoration: none;
-    color: white;
+    color: var(--white);
     border-radius: 30px;
     transition: 0.3s;
-     
 }
 
 .btn:hover {
     background: var(--red);
 }
 
-/*PROCESS*/
+/* PROCESS */
 .process {
-    padding: 100px 10%;
-    background: #111;
+    padding: 100px 8%;
     text-align: center;
+    background: #111;
 }
 
 .steps {
     display: flex;
-    justify-content: space-around;
-    gap: 30px;
+    justify-content: center;
+    gap: 40px;
     margin-top: 50px;
+    flex-wrap: wrap;
 }
 
-.step span{
+.step span {
     display: inline-block;
     width: 60px;
     height: 60px;
@@ -137,8 +130,7 @@ cta-btn {
     margin-bottom: 15px;
 }
 
-
-/* SERVICES PAGE GRID */
+/* SERVICES PAGE */
 .services-page {
     padding: 120px 8%;
     text-align: center;
@@ -149,14 +141,12 @@ cta-btn {
     margin-bottom: 60px;
 }
 
-/* GRID LAYOUT */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
-/* CARD STYLE */
 .service-card {
     background: #111;
     border-radius: 20px;
@@ -171,7 +161,6 @@ cta-btn {
     border-color: var(--green);
 }
 
-/* IMAGE */
 .service-card img {
     width: 100%;
     height: 180px;
@@ -180,7 +169,6 @@ cta-btn {
     margin-bottom: 15px;
 }
 
-/* TEXT */
 .service-card h3 {
     color: var(--green);
     margin-bottom: 10px;
@@ -189,55 +177,32 @@ cta-btn {
 .service-card p {
     color: #ccc;
     font-size: 14px;
-    line-height: 1.6;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .service-item {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .service-item img {
-        width: 100%;
-    }
-}
-
-/* CONTACT PAGE */
-/* =========================================
-   CONTACT HERO
-========================================= */
+/* CONTACT HERO */
 .contact-hero {
-    height: calc(60vh - 80px);
+    min-height: 60vh;
     background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
                 url('images/afrointek-hero.jpg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
-}
-
-.contact-hero .hero-content {
-    max-width: 700px;
+    padding: 120px 20px 60px;
 }
 
 .contact-hero h1 {
-    font-size: 48px;
+    font-size: 40px;
     color: var(--gold);
 }
 
 .contact-hero p {
     margin-top: 20px;
-    font-size: 18px;
 }
 
-/* =========================================
-   CONTACT SECTION
-========================================= */
+/* CONTACT SECTION */
 .contact-section {
-    padding: 100px 10%;
+    padding: 100px 8%;
     background: #111;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -250,7 +215,6 @@ cta-btn {
     text-align: center;
     border-radius: 12px;
     transition: 0.3s ease;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     border-top: 4px solid transparent;
 }
 
@@ -266,8 +230,8 @@ cta-btn {
 }
 
 .contact-card h3 {
-    margin-bottom: 10px;
     color: var(--gold);
+    margin-bottom: 10px;
 }
 
 .contact-btn {
@@ -277,20 +241,149 @@ cta-btn {
     background: var(--green);
     color: var(--white);
     border-radius: 30px;
-    font-weight: 500;
     transition: 0.3s ease;
+    text-decoration: none;
 }
 
 .contact-btn:hover {
     background: var(--gold);
     color: var(--black);
-    transform: scale(1.05);
 }
 
-/* ================= FOOTER ================= */
+/* ================================
+   ABOUT PAGE
+================================ */
+
+/* HERO */
+.about-hero {
+    padding: 140px 20px 60px;
+    text-align: center;
+    background: #111;
+}
+
+.about-hero h1 {
+    font-size: 48px;
+    color: var(--gold);
+}
+
+/* VISION & MISSION */
+.vision-mission {
+    padding: 60px 8%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    background: var(--black);
+}
+
+.vm-card {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    border: 1px solid #222;
+}
+
+.vm-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--green);
+}
+
+.vm-card h2 {
+    color: var(--green);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.vm-card p {
+    color: #ccc;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* FOUNDER CARDS */
+
+.founders {
+    padding: 100px 8%;
+    text-align: center;
+    background: #111;
+}
+
+.section-title {
+    font-size: 36px;
+    color: var(--gold);
+    margin-bottom: 60px;
+}
+
+.founders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+}
+
+/* CARD */
+.founder-card {
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 30px 20px;
+    transition: 0.4s ease;
+    border: 1px solid #222;
+}
+
+.founder-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--green);
+}
+
+/* IMAGE */
+.founder-image {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.founder-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* INFO */
+.founder-info h3 {
+    color: var(--white);
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.founder-info p {
+    color: var(--gold);
+    font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .about-hero h1 {
+        font-size: 32px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .vision-mission {
+        padding: 40px 20px;
+    }
+
+    .founders {
+        padding: 60px 20px;
+    }
+}
+
+/* FOOTER */
 .footer {
     background: var(--black);
-    color: #ccc;
     padding: 60px 20px 20px;
 }
 
@@ -312,14 +405,14 @@ cta-btn {
 }
 
 .footer-box h3 {
-    margin-bottom: 15px;
     color: var(--green);
+    margin-bottom: 15px;
 }
 
-.footer-box p {
+.footer-box p,
+.footer-box ul li a {
+    color: #ccc;
     font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 10px;
 }
 
 .footer-box ul {
@@ -327,18 +420,16 @@ cta-btn {
 }
 
 .footer-box ul li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .footer-box ul li a {
     text-decoration: none;
-    color: #ccc;
     transition: 0.3s;
 }
 
 .footer-box ul li a:hover {
     color: var(--red);
-    padding-left: 5px;
 }
 
 .footer-bottom {
@@ -346,6 +437,34 @@ cta-btn {
     margin-top: 40px;
     padding-top: 20px;
     text-align: center;
-    font-size: 14px;
     color: #aaa;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .steps {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+    }
 }
