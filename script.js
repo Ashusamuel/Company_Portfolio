@@ -5,3 +5,13 @@ document.querySelectorAll("a[href^='#']").forEach(anchor => {
             .scrollIntoView({ behavior: "smooth" });
     });
 });
+
+// Wait for DOM to load
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav');
+
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+});

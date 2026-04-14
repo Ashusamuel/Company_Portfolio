@@ -7,17 +7,23 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
 
 <header>
     <div class="logo">Afro<span>InTek</span></div>
-    <nav>
+    <nav class="nav" id="nav">
         <a href="index.html">Home</a>
         <a href="service.html">Services</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
     </nav>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
 </header>
 
 <main>
@@ -110,5 +116,12 @@
 </footer>
 <script src="script.js"></script>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>
 </body>
 </html>
