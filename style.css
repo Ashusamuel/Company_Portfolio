@@ -239,13 +239,13 @@ header {
 	background: #111;
 	border-radius: 20px;
 	padding: 20px;
-	transition: .4s ease;
+	transition: 0.4s ease;
 	border: 1px solid #222;
 	text-align: left;
 }
 
 .service-card:hover {
-	transform: translateX(-10px);
+	transform: translateY(-10px);
 	border-color: var(--green);
 }
 
